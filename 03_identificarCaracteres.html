@@ -6,11 +6,20 @@
     */
 
     //Entrada
-
-
+    const palavra = prompt('Informe uma palavra:')
+    let vogais = []
+    let consoantes = []
     //Processamento
-
+    for (let letra of palavra) {
+        if(letra.includes("a") || letra.includes("e") || letra.includes("i") || letra.includes("o") || letra.includes("u")){
+            vogais.push(letra)
+        }
+        else{
+            consoantes.push(letra)
+        }
+    }
 
     //Saída
+    alert(`As vogais: ${vogais.join(', ')} \n As consoantes: ${consoantes.join(', ')} \n As vogais tem ${vogais.length} letras. \n As consoantes tem ${consoantes.length} letras.`)
 
 </script>

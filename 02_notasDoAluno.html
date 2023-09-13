@@ -7,11 +7,19 @@
     */
 
     //Entrada
-
-
+    let notasAluno = [7, 5, 9, 8];
+    let notaMenor = []
+    let notaMaior = []
+    let media = 0
+    let soma = 0
     //Processamento
+    for (let identificar of notasAluno) {
+        notaMenor.push(Math.min.apply(null, identificar))
+        notaMaior.push(Math.max.apply(null, identificar))
 
 
+    }
+    
     //Saída
-
+    alert(`A menor nota é: \n ${notaMenor} \n A maior nota é: \n ${notaMaior} \n E a média é: ${media}`)
 </script>
