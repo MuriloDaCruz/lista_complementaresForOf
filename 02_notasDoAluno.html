@@ -8,18 +8,15 @@
 
     //Entrada
     let notasAluno = [7, 5, 9, 8];
-    let notaMenor = []
-    let notaMaior = []
-    let media = 0
+    notasAluno.sort((a, b) => a - b)
+    let notaMenor = notasAluno[0]
+    let notaMaior = notasAluno[notasAluno.length - 1];
     let soma = 0
     //Processamento
-    for (let identificar of notasAluno) {
-        notaMenor.push(Math.min.apply(null, identificar))
-        notaMaior.push(Math.max.apply(null, identificar))
-
-
+    for (let nota of notasAluno) {
+        soma = soma + nota
     }
-    
+    const media = soma / notasAluno.length
     //Saída
-    alert(`A menor nota é: \n ${notaMenor} \n A maior nota é: \n ${notaMaior} \n E a média é: ${media}`)
+    alert(`A menor nota é: \n ${notaMenor} \n A maior nota é: \n ${notaMaior} \n E a média é: ${media.toFixed(2)}`)
 </script>
